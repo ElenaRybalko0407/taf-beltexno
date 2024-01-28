@@ -126,8 +126,6 @@ public class AcerProgectTest extends BaseNewTest {
         acerProgect.clickButtonCatalog();
         Thread.sleep(1000);
         acerProgect.clickButtonCatalogNout();
-        // Thread.sleep(1000);
-        // acerProgect.clicButtonCatalogAcer();
         Thread.sleep(3000);
         acerProgect.clicButtonNout1();
         Thread.sleep(5000);
@@ -145,7 +143,6 @@ public class AcerProgectTest extends BaseNewTest {
         Thread.sleep(2000);
         Assertions.assertEquals(expectedAnswer, actualAnswer);
     }
-
 
     @Test
     public void testSearchNout() throws InterruptedException {

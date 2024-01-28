@@ -14,6 +14,7 @@ public class Singlton {
         }
         return driver;
     }
+
     public  static  void quitDriver(){
         if (driver != null){
             driver.quit(); //закрыть

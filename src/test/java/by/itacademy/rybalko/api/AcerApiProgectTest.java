@@ -5,6 +5,7 @@ import org.junit.jupiter.api.Test;
 import static io.restassured.RestAssured.given;
 
 public class AcerApiProgectTest {
+
     @Test
     public void testWithMailAndPassword() {
         String body = "{\n" +
