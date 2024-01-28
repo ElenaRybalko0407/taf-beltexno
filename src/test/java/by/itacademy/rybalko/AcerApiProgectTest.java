@@ -1,4 +1,4 @@
-package by.itacademy.rybalko.api;
+package by.itacademy.rybalko;
 
 import org.junit.jupiter.api.Test;
 
