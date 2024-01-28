@@ -145,8 +145,7 @@ public class AcerProgectTest extends BaseNewTest {
         Thread.sleep(3000);
         acerProgect.clicButtonNout1();
         Thread.sleep(5000);
-        acerProgect.clickJS();
-        //acerProgect.clicButtonAddInBusketNout();
+        acerProgect.clicButtonAddInBusketNout();
         Thread.sleep(3000);
         acerProgect.clicButtonNout2();
         Thread.sleep(3000);
