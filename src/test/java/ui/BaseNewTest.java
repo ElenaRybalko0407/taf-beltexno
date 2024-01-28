@@ -1,4 +1,4 @@
-package by.itacademy.api;
+package ui;
 
 import org.junit.jupiter.api.BeforeEach;
 import org.openqa.selenium.WebDriver;

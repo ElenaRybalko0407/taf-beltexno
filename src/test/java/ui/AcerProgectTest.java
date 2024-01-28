@@ -1,9 +1,10 @@
-package by.itacademy.api;
+package ui;
 
+import by.itacademy.rybalko.ui.AcerProgect;
 import org.junit.jupiter.api.Assertions;
 import org.junit.jupiter.api.Test;
 import org.openqa.selenium.WebElement;
-import by.itacademy.rybalko.ui.AcerProgect;
+import ui.BaseNewTest;
 
 import java.util.List;
 
@@ -85,13 +86,6 @@ public class AcerProgectTest extends BaseNewTest {
         String expectedErrorMailTwo = "Поле \"email\" не может быть пустым";
         Thread.sleep(2000);
         Assertions.assertEquals(expectedErrorMailTwo, actualErrorMailTwo);
-
-        //Thread.sleep(2000);
-        // String actualPasswordTwo = acerProgect.textErrorPasswordTwo();
-        // String expectedPasswordTwo = "Поле \"password\" не может быть пустым";
-        // Thread.sleep(2000);
-        //  Assertions.assertEquals(expectedPasswordTwo, actualPasswordTwo);
-
         Thread.sleep(2000);
         String actualPassword = acerProgect.textErrorPassword();
         String expectedPassword = "Логин или пароль указан неверно";
@@ -103,14 +97,6 @@ public class AcerProgectTest extends BaseNewTest {
     public void testSearchAcerWithoutMailAndPassword() throws InterruptedException {
         AcerProgect acerProgect = new AcerProgect(driver);
         acerProgect.inputButtonEnter();
-        // Thread.sleep(1000);
-        // acerProgect.tabLinkNumberMail();
-        // Thread.sleep(1000);
-        // acerProgect.sendKeysTextNumberMail("mail");
-        //Thread.sleep(1000);
-        // acerProgect.tabLinkTextPassword();
-        //  Thread.sleep(1000);
-        // acerProgect.sendKeysTextPassword("123456");
         Thread.sleep(1000);
         acerProgect.clickSubmit();
         acerProgect.textErrorMailTwo();
@@ -166,7 +152,7 @@ public class AcerProgectTest extends BaseNewTest {
         AcerProgect acerProgect = new AcerProgect(driver);
         acerProgect.openHomePage();
         Thread.sleep(3000);
-        //извлекаем коллекцию вэб-элементов
+        //извлекаем коллекцию веб-элементов
         acerProgect.sendKeasSearch("Ноутбук Acer TravelMate");
         List<WebElement> productCards = acerProgect.getProductCards();
         System.out.println(productCards);
@@ -177,7 +163,7 @@ public class AcerProgectTest extends BaseNewTest {
         AcerProgect acerProgect = new AcerProgect(driver);
         acerProgect.openHomePage();
         Thread.sleep(3000);
-        //извлекаем коллекцию вэб-элементов
+        //извлекаем коллекцию веб-элементов
         acerProgect.sendKeasSearch("Ноутбук Acer TravelMate");
         List<WebElement> productCards = acerProgect.getProductCards();
         acerProgect.printTextProdactCard();
