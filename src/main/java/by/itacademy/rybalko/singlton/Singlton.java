@@ -11,6 +11,7 @@ public class Singlton {
         if (driver ==null){
             driver = new ChromeDriver();
             driver.manage().window().maximize();
+            driver.get("https://beltexno.by/");
         }
         return driver;
     }

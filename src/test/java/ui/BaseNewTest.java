@@ -7,12 +7,12 @@ import org.openqa.selenium.chrome.ChromeDriver;
 public class BaseNewTest {
     WebDriver driver;
 
-    @BeforeEach
+  /*  @BeforeEach
     public void start() {
-        driver = new ChromeDriver();
-        driver.manage().window().maximize();
-        driver.get("https://beltexno.by/");
-    }
+       // driver = new ChromeDriver();
+       // driver.manage().window().maximize();
+       // driver.get("https://beltexno.by/");
+    }*/
 
    /* @AfterEach
     public void finish(){

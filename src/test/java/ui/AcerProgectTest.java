@@ -11,7 +11,7 @@ import java.util.List;
 public class AcerProgectTest extends BaseNewTest {
     @Test
     public void testSearchAcer() throws InterruptedException {
-        AcerProgect acerProgect = new AcerProgect(driver);
+        AcerProgect acerProgect = new AcerProgect();
         acerProgect.inputButtonEnter();
         Thread.sleep(1000);
         acerProgect.tabLinkNumberMail();
@@ -40,7 +40,7 @@ public class AcerProgectTest extends BaseNewTest {
 
     @Test
     public void testSearchAcerWithoutPassword() throws InterruptedException {
-        AcerProgect acerProgect = new AcerProgect(driver);
+        AcerProgect acerProgect = new AcerProgect();
         acerProgect.inputButtonEnter();
         Thread.sleep(1000);
         acerProgect.tabLinkNumberMail();
@@ -70,7 +70,7 @@ public class AcerProgectTest extends BaseNewTest {
 
     @Test
     public void testSearchAcerWithoutMail() throws InterruptedException {
-        AcerProgect acerProgect = new AcerProgect(driver);
+        AcerProgect acerProgect = new AcerProgect();
         acerProgect.inputButtonEnter();
         Thread.sleep(1000);
         acerProgect.tabLinkTextPassword();
@@ -95,7 +95,7 @@ public class AcerProgectTest extends BaseNewTest {
 
     @Test
     public void testSearchAcerWithoutMailAndPassword() throws InterruptedException {
-        AcerProgect acerProgect = new AcerProgect(driver);
+        AcerProgect acerProgect = new AcerProgect();
         acerProgect.inputButtonEnter();
         Thread.sleep(1000);
         acerProgect.clickSubmit();
@@ -121,7 +121,7 @@ public class AcerProgectTest extends BaseNewTest {
 
     @Test
     public void testSearchAcerFullButton() throws InterruptedException {
-        AcerProgect acerProgect = new AcerProgect(driver);
+        AcerProgect acerProgect = new AcerProgect();
         Thread.sleep(1000);
         acerProgect.clickButtonCatalog();
         Thread.sleep(1000);
@@ -146,7 +146,7 @@ public class AcerProgectTest extends BaseNewTest {
 
     @Test
     public void testSearchNout() throws InterruptedException {
-        AcerProgect acerProgect = new AcerProgect(driver);
+        AcerProgect acerProgect = new AcerProgect();
         acerProgect.openHomePage();
         Thread.sleep(3000);
         //извлекаем коллекцию веб-элементов
@@ -157,7 +157,7 @@ public class AcerProgectTest extends BaseNewTest {
 
     @Test
     public void testSearchAllNout() throws InterruptedException {
-        AcerProgect acerProgect = new AcerProgect(driver);
+        AcerProgect acerProgect = new AcerProgect();
         acerProgect.openHomePage();
         Thread.sleep(3000);
         //извлекаем коллекцию веб-элементов

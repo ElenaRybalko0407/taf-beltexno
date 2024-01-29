@@ -1,5 +1,6 @@
 package by.itacademy.rybalko.ui;
 
+import by.itacademy.rybalko.singlton.Singlton;
 import org.openqa.selenium.*;
 
 import java.util.List;
@@ -43,12 +44,12 @@ public class AcerProgect { //beltexno
 
     WebDriver driver;
 
-    public AcerProgect(WebDriver driver) {
-        this.driver = driver;
+    public AcerProgect() {
+        this.driver = Singlton.getDriver();
     }
 
-   /* public AcerProgect() {
-        this.driver = MyDriver.getDriver();
+      /* public AcerProgect(WebDriver driver) {
+        this.driver = driver;
     }*/
 
     public void inputButtonEnter() {
