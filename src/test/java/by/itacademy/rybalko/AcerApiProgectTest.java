@@ -4,6 +4,8 @@ import org.junit.jupiter.api.Test;
 
 import static io.restassured.RestAssured.given;
 
+import static org.hamcrest.Matchers.equalTo;
+
 public class AcerApiProgectTest {
 
     @Test
@@ -18,8 +20,8 @@ public class AcerApiProgectTest {
                 .when()
                 .post("https://beltexno.by/account-services/auth_account")
                 .then()
-                .statusCode(200)
-                .log().body();
+                .assertThat()
+                .body("message", equalTo("Логин или пароль указан неверно"));
     }
 
     @Test
@@ -81,8 +83,9 @@ public class AcerApiProgectTest {
                 .header("content-type", "application/json; charset=utf-8")
                 .when()
                 .post("https://beltexno.by/account-services/auth_account")
-                .then().                                                                                     //log().all().assertThat().
-                statusCode(200);                                                                          //.body("key", equalTo("Неверный логин или пароль."));
+                .then()
+                .assertThat()                                                                                     //log().all().assertThat().
+                .statusCode(200);                                                                          //.body("key", equalTo("Неверный логин или пароль."));
     }
 
 }

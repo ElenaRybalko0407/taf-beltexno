@@ -6,9 +6,8 @@ import org.openqa.selenium.chrome.ChromeDriver;
 public class Singlton {
     private static WebDriver driver;
 
-    //метод getDriver, который возвращает Driver
-    public static WebDriver getDriver(){
-        if (driver ==null){
+    public static WebDriver getDriver() {
+        if (driver == null) {
             driver = new ChromeDriver();
             driver.manage().window().maximize();
             driver.get("https://beltexno.by/");
@@ -16,10 +15,10 @@ public class Singlton {
         return driver;
     }
 
-    public  static  void quitDriver(){
-        if (driver != null){
-            driver.quit(); //закрыть
-            driver = null; //обнулить
+    public static void quitDriver() {
+        if (driver != null) {
+            driver.quit();
+            driver = null;
         }
     }
 
