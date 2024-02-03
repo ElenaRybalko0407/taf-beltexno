@@ -2,7 +2,11 @@ package by.itacademy.rybalko.ui;
 
 import by.itacademy.rybalko.singlton.Singlton;
 import org.openqa.selenium.*;
+import org.openqa.selenium.support.ui.ExpectedConditions;
+import org.openqa.selenium.support.ui.Wait;
+import org.openqa.selenium.support.ui.WebDriverWait;
 
+import java.time.Duration;
 import java.util.List;
 
 public class AcerProgect {
@@ -19,7 +23,7 @@ public class AcerProgect {
     public String clickButtonCatalog = "//*[text() = 'Каталог']";                                                                                                                                                                 //"/html/body/div[1]/div[1]/header/div[2]/div/div/div[1]/div/ul/li[1]";
     public String clickButtonCatalogNout = "//*[text() = ' Ноутбуки']";                                                                                                                                                                 //"/html/body/div[1]/div[1]/header/div[2]/div/div/div[1]/div/ul/li[1]/div/div[1]/ul/li[1]/a";
     public String clickButtonNout1 = "//a[@class='product_img_link' and @href='/catalog/igrovoi-noutbuk-asus-rog-strix-g18-2023-g814ju-n5059']";                                                                                    //"/html/body/div[1]/div[2]/div/div/div/div/div/div/div[2]/ul/div/div/li[1]/div/div/div[1]/div[1]/div/div/div/a/img";                                                                                                                                                                             //"/html/body/div[1]/div[2]/div/div/div/div/div/div/div[2]/ul/div/div/li[1]/div/div/div[1]/div[1]/div/div/div/a/img";
-    public String clickButtonAddInBucketNout = "//*[@style='display:inline-table;' or @class='add_to_cart' or data-size='57296']";
+    public String clickButtonAddInBucketNout = "//*[@style='display:inline-table' or @class='add_to_cart' or data-size='57296']";
     public String textInBucket = "//*[text() = 'Игровой ноутбук ASUS ROG Strix G18 (2023) G814JU-N5059']";                                                                                                                                 //"/html/body/div[1]/div[2]/div/div/div[2]/div/div/div[1]/div/div/div[1]/header/h1";
 
     WebDriver driver;
@@ -58,8 +62,9 @@ public class AcerProgect {
         driver.findElement(By.xpath(clickSubmit)).click();
     }
 
-    public String textErrorMail() throws InterruptedException {
-        waiter();
+    public String textErrorMail() {
+        Wait wait = new WebDriverWait(driver, Duration.ofSeconds(4));
+        wait.until(ExpectedConditions.invisibilityOf(driver.findElement(By.xpath(textErrorMail))));
         return driver.findElement(By.xpath(textErrorMail)).getText();
     }
 
@@ -88,12 +93,12 @@ public class AcerProgect {
         driver.findElement(By.xpath(clickButtonCatalogNout)).click();
     }
 
-    public void clicButtonNout1() throws InterruptedException {
+    public void clickButtonNout1() throws InterruptedException {
         waiter();
         driver.findElement(By.xpath(clickButtonNout1)).click();
     }
 
-    public void clicButtonAddInBusketNout() throws InterruptedException {
+    public void clickButtonAddInBucketNout() throws InterruptedException {
         waiter();
         WebElement element = driver.findElement(By.xpath(clickButtonAddInBucketNout));
         clickElement(driver, element);

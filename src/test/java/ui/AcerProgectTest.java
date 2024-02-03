@@ -82,8 +82,8 @@ public class AcerProgectTest extends BaseNewTest {
         AcerProgect acerProgect = new AcerProgect();
         acerProgect.clickButtonCatalog();
         acerProgect.clickButtonCatalogNout();
-        acerProgect.clicButtonNout1();
-        acerProgect.clicButtonAddInBusketNout();
+        acerProgect.clickButtonNout1();
+        acerProgect.clickButtonAddInBucketNout();
         String actualAnswer = acerProgect.textInBusket();
         String expectedAnswer = "Игровой ноутбук ASUS ROG Strix G18 (2023) G814JU-N5059";
         Assertions.assertEquals(expectedAnswer, actualAnswer);
